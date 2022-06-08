@@ -1,0 +1,17 @@
+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
+
+
+
+<<<<<<< HEAD
+https://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@github.com/yasapuramvalmikinayana/core_java.git
+=======
+https://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@github.com/yasapuramvalmikinayana/core_java.git
+
+
+git commands:
+
+1) git status
+2) git add .
+3) git commit -m  "msg"
+4)git push origin branchname
+>>>>>>> a5ebe8c... files added

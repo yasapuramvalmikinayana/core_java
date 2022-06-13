@@ -1,5 +1,12 @@
 package com.xworkz.abstraction.interface_test;
 
-public interface Sony {
+public class Sony implements Printer {
+
+	@Override
+	public void print() {
+		// TODO Auto-generated method stub
+		System.out.println("sony");
+		
+	}
 
 }

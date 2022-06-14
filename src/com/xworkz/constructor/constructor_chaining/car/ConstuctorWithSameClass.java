@@ -6,7 +6,7 @@ public class ConstuctorWithSameClass {
 		Car car =new Car();
 		System.out.println(" Car model is :"+car.model);
 	   System.out.println(" Car color is :"+car.color);
-	    System.out.println(" Car model is :"+car.price);
+	    System.out.println(" Car price is :"+car.price);
 }  
 }
 

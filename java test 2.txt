@@ -1,0 +1,158 @@
+2/7/2022-->javaTest-2
+
+
+1. What is the use of classloader in java?
+
+       * The java classloader is a part of the java  runtime environment that dyanmically loads java classes into java virtual machine.
+
+
+2. Difference between While and Do-while loop?
+
+                 While                                                                                                                      Do while loop
+
+*While loop is entry control loop.                                                                     *Do while loop is exict control loop.
+*A while loop is pre test while loop.                                                                  *A do while loop is post test while loop.
+*if their is a single statement ,brackets are not requried.                               *At least one statement will excute once.
+*Variable is condition is initialized before the exction for the loop.              *Semicolon at the end while (condition).
+ *while (condition)
+{ Statement (s);}  
+
+                                                                                                                                              
+3. Write a program to achieve infinite loop and give reason?
+
+
+                          
+4. What is variable? Write the syntax and examples.
+Variable is name of memory location.which is used to hold the values at the program excution.
+                  Syntax;Datatype variablename=value;
+                        ex:String name="nayana";
+5. Which is the basic unit of storage in a program?
+6. Write the difference between Static variable, Instance variable
+and Local variable
+Static,Instance and Local variable:
+                                                        Instance Variable:
+                                                                          1.these variables are declared inside the class and outside the main method.
+                                                                          2.when creating object memory will be allocated. when object is destroy memory will be destroy autimatically.
+				3.these instance variables are one for an object.
+				4. these instance variables are stored in heap memory.
+
+			Local Variable :
+				1.these variables are declared outside the class and inside the main method.
+				2.these variables stored static memory.
+				3.when method is starts the memory will be alloacted. when method is completes the memory will be destroy.
+				
+	                                  Static variables:     
+                                                                         1. the static variables declared inside the class out side the methods .
+                                                                         2. these static variables allocated memory when .class file is loaded.
+
+7. We can access the Static variable with the help of object or not,
+give the Reason
+ 
+8. Define the access specifiers?
+
+               -->Acess specifier help us to restrict the scope or visbility of package,class,constructor,methods,variables,or other data members.
+
+9. How many ways are to create Object?
+
+               --> these are five ways to creat an object
+                                1.new instance method.
+                                2.by using new key word.
+                                3.colne method.
+                                4. serialization method.
+                                5.factory method.
+
+10. What is deserialization?
+11. What is Anonymous objects?
+        * Anonymous  object. Anonymous simply means nameless.An object which has no refernce is known as an anynomyous object.
+        *It can be used at the time of object creation only.
+       
+12. Explain the class and method signature?
+13. Explain the wrapper classes? Why its need in java?
+14. What is constructor and Destructor in java?
+          A constructor in Java is similar to a method that is invoked when an object of the class is created.
+
+        Unlike Java methods, a constructor has the same name as that of the class and does not have any return type. For example,
+
+                    class Test {
+                       Test() {
+  }
+15. How constructor differ from methods?
+16. Explain the Types of constructor with example?
+        A constructor is a special type of function with no return type. Name of constructor should be same as the name of the class.
+             1.Default Constructor
+             2.Parameterized Constructor
+     Default Constructor:
+           Default constructor does not take any parameter.compiler creates a default constructor if we do not define any default constructor inside the class,
+           Default constructor is created by the compiler if we do not create any constructor inside the class.
+           Default constructor does not take any parameter.
+           Default constructor is called when we create an object of the class.
+   Parameterized Constructor:
+           Parameterized Constructor is created by the developer. 
+           This constructor takes at least one parameter.
+           I have defined one Parameterized constructor below.
+ 
+17. If Copy constructor is supported In Java? Give example
+18. What is constructor chaining? Why we need?
+
+                  *Constructor chaining is a process of calling one constructor to another constructor with respective object.
+
+19. What is the use of super and This keyword in java? 
+
+               *Super key word is used to call parent class.
+               *This key word is used to represent current object.
+ 
+20. What is use of this() in java?
+
+              *this() keyword is used to represent current object.
+
+21. Can we have private constructors ?
+*yes
+22. What is a Singleton class?
+23. Write the types of polymorphism with example and how
+we will achieve in java
+polymorphism:- 
+    The ability of the method to behave differently when different object acting upon it.
+              There are 2 types in polymorphism
+                    a) compile time polymorphism:-
+                                            out of so many overloaded methods which method is implementation should be executing is decided by compiler at the compile time.
+                   b) run time polymorphism:-
+                                            out of so many over.
+24. Difference between Method overloading and method
+overr 
+                                MethodOverloading                                                                                                                                Method Overriding
+   *Method overloading is used to increase the readability of the program.	                                   * Method overriding is used to provide the specific implementation of the method that is already provided by its super class.
+   *Method overloading is performed within class.	                                                                         * Method overriding occurs in two classes that have IS-A (inheritance) relationship.
+   *In case of method overloading, parameter must be different.	                                                       *In case of method overriding, parameter must be same.
+   *Method overloading is the example of compile time polymorphism.	                                    *Method overriding is the example of run time polymorphism.
+   *In java, method overloading can't be performed by changing return type of the method only.    *Return type can be same or different in method overloading. 
+25. Advantages of Dynamic Method Dispatch?
+26. What is static and Dynamic binding?
+
+27. Why we need method overriding? Can we override the
+below methods?
+1.main() 2.static() 3.final() 4.Constructor() 5.Abstruct()
+32. When to use abstract classes and abstract methods with an
+34.Differnce between classes and interfaces?
+Class:
+	*The keyword used to create a class is “class”.
+	*Classes does not support multiple inheritance.
+	*Class can be inherit another class.
+	*Class can contain constructors.
+Interface:	
+	*Class cannot contain abstract Interface.
+	*The keyword used to create an interface is “interface”.
+	*Interface supports multiple inheritance.
+	*It cannot inherit a class.
+	*It cannot contain constructors.
+	*It contains abstract methods only.
+.
+35. Can we have Nested Interfaces? Give Examples.
+37. Write a program to print even and odd elements in an Array
+separately
+38. “ArrayIndexOutOfBoundsException” when we will get this
+error?
+39. Are static local variables allowed in Java?
+40. Java program to print the sum of all the items of the array
+41. Java program to sort the elements of an array in ascending order
+42. Java program to remove Duplicate Elements in an Array
+

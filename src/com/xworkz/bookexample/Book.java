@@ -10,4 +10,24 @@ public class Book {
 		
 	}
 
+	public void setBrand(String string) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	public void setNoofpages(int i) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	public void setPrice(double d) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	public int getNoofpages() {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+
 }

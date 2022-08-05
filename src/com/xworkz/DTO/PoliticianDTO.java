@@ -1,6 +1,7 @@
 package com.xworkz.DTO;
 
 import com.xworkz.constants.PartyName;
+
 import com.xworkz.constants.PartySymbol;
 
 import lombok.AllArgsConstructor;
@@ -11,15 +12,16 @@ import lombok.ToString;
 
 @Getter
 @Setter
+@ToString
 @NoArgsConstructor
 @AllArgsConstructor
-@ToString
+
 public class PoliticianDTO {
 	private int id;
-	private PartyName partyName=PartyName.AAP;
+	private PartyName partyName;
 	private String president;
 	private double TotalMembers;
-	private PartySymbol partySymbol=PartySymbol.BJPSYMBOL;
+	private PartySymbol partySymbol;
 	private String partylocation;
 	private String partycolour;
 	private String partystate;

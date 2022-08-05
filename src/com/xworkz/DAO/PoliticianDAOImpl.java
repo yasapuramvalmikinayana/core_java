@@ -1,11 +1,17 @@
 package com.xworkz.DAO;
 
 import java.net.URL;
+
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.SQLException;
 
 import com.xworkz.DTO.PoliticianDTO;
+import com.xworkz.constants.PartyName;
+import com.xworkz.constants.PartySymbol;
+
 import static com.xworkz.constants.DBProperties.*;
 
 public class PoliticianDAOImpl implements PoliticianDAO {
@@ -42,39 +48,261 @@ public class PoliticianDAOImpl implements PoliticianDAO {
 
 	@Override
 	public PoliticianDTO findById(int id) {
-
+		try {
+			Connection connection=DriverManager.getConnection(URL.getvalue()
+					,USERNAME.getvalue(),SECRET.getvalue());
+			String quary="select*from politician.politician_info where id=?";
+			PreparedStatement statement=connection.prepareStatement(quary);
+			statement.setInt(1, id);
+			ResultSet rs=statement.executeQuery();
+			while(rs.next()) {
+				Integer id1=rs.getInt(1);
+				String name=rs.getString(2);
+				String president=rs.getString(3);
+				double totalmembers=rs.getDouble(4);
+				String ps=rs.getString(5);
+				String pc=rs.getString(6);
+				String pl=rs.getString(7);
+				String ps1=rs.getString(8);
+				double pb=rs.getDouble(9);
+				System.out.println(id1+" "+name);
+				
+				PoliticianDTO pdto=new PoliticianDTO();
+				pdto.setId(id1);
+				pdto.setPartyName(PartyName.getvalue(name));
+			    pdto.setPresident(president);
+				pdto.setTotalMembers(totalmembers);
+				pdto.setPartySymbol(PartySymbol.getbyvalue(ps));
+				pdto.setPartycolour(pc);
+				pdto.setPartylocation(pl);
+				pdto.setPartystate(ps1);
+				pdto.setPartybudget(pb);
+				return pdto;
+		
+			}
+			
+		} catch (SQLException e) {
+		e.printStackTrace();
+		}
 		return null;
+	}
+		public PoliticianDTO findByIdAndPresident(int id, String president) {
+			try {
+				Connection connection=DriverManager.getConnection(URL.getvalue()
+						,USERNAME.getvalue(),SECRET.getvalue());
+				String quary="select*from politician.politician_info where id=? And President=?";
+				PreparedStatement statement=connection.prepareStatement(quary);
+				statement.setInt(1, id);
+				statement.setString(2, president);
+				ResultSet rs=statement.executeQuery();
+				while(rs.next()) {
+					Integer id1=rs.getInt(1);
+					String partyname=rs.getString(2);
+					String president1=rs.getString(3);
+					double tm=rs.getDouble(4);
+					String ps=rs.getString(5);
+					String pc=rs.getString(6);
+					String pl=rs.getString(7);
+					String ps1=rs.getString(8);
+					double pb=rs.getDouble(9);
+					System.out.println(id1+" "+partyname);
+					
+					PoliticianDTO pdto=new PoliticianDTO();
+					pdto.setId(id1);
+					pdto.setPartyName(PartyName.getvalue(partyname));
+				    pdto.setPresident(president1);
+					pdto.setTotalMembers(tm);
+					pdto.setPartySymbol(PartySymbol.getbyvalue(partyname));
+					pdto.setPartycolour(pc);
+					pdto.setPartylocation(pl);
+					pdto.setPartystate(ps1);
+					pdto.setPartybudget(pb);
+					return pdto;
+			
+				}
+				
+			} catch (SQLException e) {
+				e.printStackTrace();
+				
+			}
+			return null;
+		
 	}
 
 	@Override
 	public PoliticianDTO findByIdandPresident(int id, String president) {
-
-		return null;
-	}
+			try {
+				Connection connection=DriverManager.getConnection(URL.getvalue()
+						,USERNAME.getvalue(),SECRET.getvalue());
+				String quary="select*from politician.politician where id=? And President=?";
+				PreparedStatement statement=connection.prepareStatement(quary);
+				statement.setInt(1, id);
+				statement.setString(2, president);
+				ResultSet rs=statement.executeQuery();
+				while(rs.next()) {
+					Integer id1=rs.getInt(1);
+					String partyname=rs.getString(2);
+					String president1=rs.getString(3);
+					double tm=rs.getDouble(4);
+					String ps=rs.getString(5);
+					String pc=rs.getString(6);
+					String pl=rs.getString(7);
+					String ps1=rs.getString(8);
+					double pb=rs.getDouble(9);
+					System.out.println(id1+" "+partyname);
+					
+					PoliticianDTO pdto=new PoliticianDTO();
+					pdto.setId(id1);
+					pdto.setPartyName(PartyName.getvalue(partyname));
+				    pdto.setPresident(president1);
+					pdto.setTotalMembers(tm);
+					pdto.setPartySymbol(PartySymbol.getbyvalue(partyname));
+					pdto.setPartycolour(pc);
+					pdto.setPartylocation(pl);
+					pdto.setPartystate(ps1);
+					pdto.setPartybudget(pb);
+					return pdto;
+			
+				}
+				
+			} catch (SQLException e) {
+				e.printStackTrace();
+				
+			}
+			return null;
+		}
+	
 
 	@Override
 	public PoliticianDTO findByIdAndpresidentAndName(int id, String president, String name) {
+		try {
+		Connection connection=DriverManager.getConnection(URL.getvalue()
+				,USERNAME.getvalue(),SECRET.getvalue());
+		String quary="select*from politician.politician_info where id=? And President=? And Name=?";
+		PreparedStatement statement=connection.prepareStatement(quary);
+		statement.setInt(1, id);
+		statement.setString(2, president);
+		statement.setString(3, name);
+		ResultSet rs=statement.executeQuery();
+		while(rs.next()) {
+			Integer id1=rs.getInt(1);
+			String Partyname1=rs.getString(2);
+			String president1=rs.getString(3);
+			double tm=rs.getDouble(4);
+			String ps=rs.getString(5);
+			String pc=rs.getString(6);
+			String pl=rs.getString(7);
+			String ps1=rs.getString(8);
+			double pb=rs.getDouble(9);
+			System.out.println(id1+" "+name);
+			
+			PoliticianDTO pdto=new PoliticianDTO();
+			pdto.setId(id1);
+			pdto.setPartyName(PartyName.getvalue(Partyname1));
+		    pdto.setPresident(president1);
+			pdto.setTotalMembers(tm);
+			pdto.setPartySymbol(PartySymbol.getbyvalue(ps));
+			pdto.setPartycolour(pc);
+			pdto.setPartylocation(pl);
+			pdto.setPartystate(ps1);
+			pdto.setPartybudget(pb);
+			return pdto;
+			}
+		}
+	
+	catch(SQLException e) {
+		e.printStackTrace();
+	}
 
 		return null;
 	}
 
 	@Override
 	public PoliticianDTO findByIdAndName(int id, String name) {
+		try {
+			Connection connection=DriverManager.getConnection(URL.getvalue()
+					,USERNAME.getvalue(),SECRET.getvalue());
+			String quary="select*from politician.politician where id=? And Name=?";
+			PreparedStatement statement=connection.prepareStatement(quary);
+			statement.setInt(1, id);
+			statement.setString(2, name);
+			ResultSet rs=statement.executeQuery();
+			while(rs.next()) {
+				Integer id1=rs.getInt(1);
+				String name1=rs.getString(2);
+				String president=rs.getString(3);
+				double tm=rs.getDouble(4);
+				String ps=rs.getString(5);
+				String pc=rs.getString(6);
+				String pl=rs.getString(7);
+				String pstate=rs.getString(8);
+				double pb=rs.getDouble(9);
+				System.out.println(id1+" "+name1);
+				
+				PoliticianDTO pdto=new PoliticianDTO();
+				pdto.setId(id1);
+				pdto.setPartyName(PartyName.getvalue(name1));
+			    pdto.setPresident(president);
+				pdto.setTotalMembers(tm);
+				pdto.setPartySymbol(PartySymbol.getbyvalue(ps));	
+				pdto.setPartycolour(pc);
+				pdto.setPartylocation(pl);
+				pdto.setPartystate(pstate);
+				pdto.setPartybudget(pb);
+				return pdto;}
+			
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}
+		
 
 		return null;
 	}
 
 	@Override
 	public String findNamebyId(int id) {
+		try { Connection connection=DriverManager.getConnection(URL.getvalue()
+				,USERNAME.getvalue(),SECRET.getvalue());
+				
+		String quary="select*from politician.politician where Name=?";
+		PreparedStatement statement=connection.prepareStatement(quary);
+		statement.setInt(1, id);
+		ResultSet rs = statement.executeQuery(quary);
 
-		return null;
+		while (rs.next()) {
+			String name=rs.getString(1);
+			return name;
+		}
+	
+	
+		
+	}catch (Exception e) {
+		e.printStackTrace();
 	}
+	return null;
+}
+			
 
 	@Override
 	public String findpresidentByIdAndName(String name, int id) {
-
+		try {
+			Connection connection=DriverManager.getConnection(URL.getvalue()
+					,USERNAME.getvalue(),SECRET.getvalue());
+			String quary="select*from politician.politician_info where id=? And Name=?";
+			PreparedStatement statement=connection.prepareStatement(quary);
+			statement.setInt(1, id);
+			statement.setString(2, "Name");
+			ResultSet rs=statement.executeQuery();
+			while(rs.next()) {
+				Integer id1=rs.getInt(1);
+				String Name=rs.getString("Name");}
+		} catch (Exception e) {
+           e.printStackTrace();
+		}
 		return null;
 	}
+		
+
 
 	@Override
 	public int getTotal() {

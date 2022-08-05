@@ -19,8 +19,8 @@ public enum PartySymbol {
 		return partySymbol;
 	}
 	public static PartySymbol getbyvalue(String value) {
-		PartySymbol[] partySymbol=PartySymbol.values();
-		for(PartySymbol symbol1:partySymbol) {
+		PartySymbol[] Symbol=PartySymbol.values();
+		for(PartySymbol symbol1:Symbol) {
 			if(symbol1.partySymbol.equals(value)) {
 				return symbol1;
 				

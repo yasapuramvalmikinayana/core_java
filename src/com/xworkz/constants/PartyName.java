@@ -26,6 +26,7 @@ public enum PartyName {
 		PartyName[] partyname=PartyName.values();
 		for(PartyName partyname2:partyname) {
 			if(partyname2.partyname.equals(value)){
+				return partyname2;
 		}
 		}
 		return null;

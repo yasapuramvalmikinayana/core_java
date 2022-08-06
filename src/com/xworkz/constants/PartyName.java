@@ -25,13 +25,11 @@ public enum PartyName {
 	public static PartyName getvalue(String value) {
 		PartyName[] partyname=PartyName.values();
 		for(PartyName partyname2:partyname) {
-			if(partyname2.partyname.equals(value)){
+			if(partyname2.partyname.equals(value))
+			{
 				return partyname2;
-		}
+		    }
 		}
 		return null;
-	
-}
-	
-
+	}
 }

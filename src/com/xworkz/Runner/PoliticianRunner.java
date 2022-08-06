@@ -1,6 +1,7 @@
 package com.xworkz.Runner;
 
 import com.xworkz.DAO.PoliticianDAO;
+
 import com.xworkz.DAO.PoliticianDAOImpl;
 import com.xworkz.DTO.PoliticianDTO;
 import com.xworkz.constants.PartyName;
@@ -9,22 +10,37 @@ import com.xworkz.constants.PartySymbol;
 public class PoliticianRunner {
 
 	public static void main(String[] args) {
-		PoliticianDTO pdto1 = new PoliticianDTO(9, PartyName.LDP, "vanita", 450.0D, PartySymbol.LDPSYMBOL,
+		PoliticianDTO pdto = new PoliticianDTO(9, PartyName.LDP, "vanita", 450.0D, PartySymbol.LDPSYMBOL,
 				"yellow", "chinna", "nepal", 30000.0D);
 		
 
 		PoliticianDAO pdao = new PoliticianDAOImpl();
-//		pdao.save(pdto1);
 		
-//		PoliticianDAO pdao1 = new PoliticianDAOImpl();
-//        System.out.println(pdao1);
 		
-		//PoliticianDTO pdao2 =pdao.findByIdandPresident(9,"vanita");
-		//System.out.println(pdao2);
-		//PoliticianDTO pdao3 =pdao.findByIdandPresident(5,"nithin");
-		//System.out.println(pdao3);
-		PoliticianDTO pdao4 =pdao.findByIdandPresident(8,"prashant");
-		System.out.println(pdao4);
+//		pdao.save(pdto);
+		
+//		PoliticianDTO pda1=pdao.findById(4);
+//       System.out.println(pda1);
+		
+//		PoliticianDTO pda2 =pdao.findByIdandPresident(7,"parthasarathi");
+//     	System.out.println(pda2);
+//		PoliticianDTO pda3 =pdao.findByIdAndpresidentAndName(1,"Dropadi murmu","BJP");
+//		System.out.println(pda3);
+//		PoliticianDTO pda4 =pdao.findByIdAndName(3,"CONGRESS");
+//		System.out.println(pda4);
+		
+//		String pda5=pdao.findNamebyId(5);
+//		System.out.println(pda5);
+		
+//		String pda6=pdao.findpresidentByIdAndName(7,"PDP");
+//	System.out.println(pda6);
+	
+//		int pda7=pdao.getTotal();
+//		System.out.println(pda7);
+		 
+		PoliticianDTO pda8=pdao.findPartyByMaxMembers();
+      System.out.println(pda8);
+		
 		
 	}
 
